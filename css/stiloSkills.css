@@ -1,11 +1,11 @@
 
 p.text-white{
-    font-size: 12pt;
+    
     text-align: center;
-    display: flex;
     align-content: center;
     
 }
+
 
 .wrapperCard {
   position: relative;
