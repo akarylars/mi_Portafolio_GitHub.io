@@ -50,3 +50,4 @@ const campos = {
 	telefono: false
 }
 
+/*las pruebas de js  */
