@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portafolio: Akary Larios.</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <nav clas=" body-container">
+    </nav>
+
+<!--FORMULARIO CONTACTO--> 
+<div class="container formulario" id="formulario">
+      <div class="col-md-12 col-lg-9 mx-auto">
+          <div class="textoFormulario">
+              <p class="text-center text-white" style="font-size: 20pt;"><strong>Deja tus datos y contáctame</strong></p>
+          </div>
+      
+          <form class="row g-3 field formulario formulario_grupo" id="grupo_nombre">
+              <div class="col-md-12 formulario_grupo" id="grupo_usuario">
+                  <label for="nombre" class="form-label text-white formulario_label">
+                    Nombre completo</label>
+                  <div class="input-group formulario_grupo-input">
+                    <input type="text" class="form-control formulario_input" name="nombre" id="nombre" 
+                     placeholder="Coloca tu nombre"
+                    style="background-color: #e4c24765; background-image: url('./src/image\ 8.png'); 
+                    background-size: 20px 20px; background-repeat: no-repeat; background-position: right; 
+                    padding-right: 15px;background-origin: content-box;">
+                  </div>
+                  <p class="formulario_input-error"> El campo es requerido con un nombre válido 
+                    (no bloques de espacio, ni cifras)
+                    <i class=" formulario_validacion-estado bi bi-x-circle-fill" style="color: red; padding-left: 1%;"></i>
+                  </p>
+              </div>
+
+              <div class="col-md-6 field">
+                  <label for="telefono" class="form-label text-white formulario_label">Teléfono</label>
+                  <div class="input-group formulario_grupo-input">
+                    <input type="text" class="form-control formulario_input" name="telefono" id="telefono"  placeholder="Ejemplo: 5512345678"
+                    style="background-color: #e4c24765; background-image: url('./src/image\ 7.png'); 
+                    background-size: 20px 20px; background-repeat: no-repeat; background-position: right; 
+                    padding-right: 15px;background-origin: content-box;">
+                    
+                  </div>
+                  <p class="formulario_input-error">El teléfono solo contiene máx. 10 cifras
+                    <i class="formulario_validacion-estado bi bi-x-circle-fill" style="color: red;padding-left: 1%; "></i>
+                  </p>
+              </div>
+              <div class="col-md-6 field formulario_grupo" id="grupo_correo">
+                  <label for="correo" class="form-label text-white formulario_label">E-mail</label>
+                  <div class="input-group formulario_grupo-input">
+                    <input type="email" class="form-control formulario_input" name="correo" id="correo"  placeholder="tu_correo@dominio.com"
+                    style="background-color: #e4c24765; background-image: url('./src/Correo\ 2\ img.png'); 
+                    background-size: 20px 20px; background-repeat: no-repeat; background-position: right; 
+                    padding-right: 15px;background-origin: content-box;">
+                  </div>
+                  <p class="formulario_input-error">
+                    el correo necesita un dominio, sin espacios, con letras, símbolos o números.
+                    <i class="formulario_validacion-estado bi bi-x-circle-fill" style="color: red; padding-left: 1%;"></i>
+                  </p>
+                  
+              </div>
+              <div class="col-12 field">
+                  <label for="message" class="form-label text-white">Mensaje</label>
+                  <textarea type="text" class="form-control" name="message" id="message" rows="3" style="background-color:#e4c24765"></textarea>
+              </div>
+
+             <div class="formulario_mensaje" id="formulario_mensaje">
+              <p class="formulario_input-error " style="background-color: rgba(230, 28, 28, 0.539); padding: 1%;">
+                <i class="bi bi-exclamation-triangle-fill" ></i> 
+                <b>Error:</b>
+                Porfavor llena correctamente el formulario.
+              </p>
+
+             </div>
+
+              <div class="formulario_grupo formulario_grupo-btn-enviar">
+                <div class="col-12 d-flex justify-content-end">
+                  <button class="boton-descarga" style="border-radius: 10px; text-align: center;">
+                    <a href="#" class="btn text-warning " id="btnCv">Enviar</a>
+                  </button>
+                </div>
+                <p class="formulario_mensaje-exito" id="formulario_mensaje-exito">
+                  Fomulario enviado exitosamente
+                 </p>
+              </div>
+              
+          </form>
+      </div>
+    </div>
+  
+  <!--TERMINA CONTACTO-->
+
+
+
+    <footer>
+    </footer>
+
+      <script src="./js/main.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
