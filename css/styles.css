@@ -215,6 +215,7 @@ p.fomulario_mensaje-exito-activo{
 }
 .formulario_grupo-correcto .formulario_validacion-estado{
   color: #1ed12d;
+  box-shadow: 4px, 4px, 6px #1ed12d;
   opacity: 1;
 }
 .formulario_grupo-incorrecto .formulario_label{
