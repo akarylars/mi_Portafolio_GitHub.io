@@ -101,13 +101,27 @@ document.getElementById('form')
        }//validar todos los campos
     
        if (isValid){
-        Swal.fire({title:"envío exitoso",
-        text: 'Gracias por tu interés, te contactaré pronto',
-        icon: 'success',
-        confirmButtonColor: "#E4C247",
-        confirmButtonText: '¡ok, gracias!'
-    });
-       if (isValid){
+        btn.value = 'Enviando ...';
+        const serviceID = 'service_gzjlcm8';
+        const templateID = 'template_geg7iok';
+
+       emailjs.sendForm(serviceID, templateID, this) 
+        .then(() => {
+            btn.value = 'Send Email';
+            Swal.fire({
+            title:"envío exitoso",
+            text: 'Gracias por tu interés, te contactaré pronto',
+            icon: 'success',
+            confirmButtonColor: "#E4C247",
+            confirmButtonText: '¡ok, gracias!'
+            })
+          }, (err) => {
+            btn.value = 'Send Email';
+            alert(JSON.stringify(err));
+          }); //emailjs codigo para envío + personalización de alert
+      
+   
+       
         txtNombre.value="";
         email.value="";
         email.style.border="";
@@ -116,11 +130,10 @@ document.getElementById('form')
         txtNumber.value="";
         mensaje.value="";
         mensaje.style.border="";
-       }
+
         
         }//isValid
-      
-   
+
 
 
     });//btn "enviar"
