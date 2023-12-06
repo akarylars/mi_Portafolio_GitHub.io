@@ -43,10 +43,40 @@ document.getElementById('form')
 
     alertValidaciones.innerHTML="";
     alertValidaciones.style.display="none";
-    txtNombre.style.border="solid thin green";
-    txtNumber.style.border="solid thin green";
-    email.style.border="solid thin green";
-    mensaje.style.border="solid thin green";
+    txtNombre.style.border="solid thick green";
+    txtNumber.style.border="solid thick green";
+    email.style.border="solid thick green";
+    mensaje.style.border="solid thick green";
+    if (! validarMensaje()){
+        Swal.fire({title:"El campo mensaje, es requerido",
+    text: 'este campo no se puede ir vacío',
+    icon: 'error',
+    confirmButtonColor: "#E4C247",
+    confirmButtonText: 'Ok'
+}); 
+    mensaje.style.border="solid thick red";
+    isValid = false;
+    }//validar mensaje
+    if (! validarCorreo()){
+        Swal.fire({title:"El campo e-mail es requerido",
+        text: 'Se requiere el siguiente formato: tu_correo@dominio.com',
+        icon: 'error',
+        confirmButtonColor: "#E4C247",
+        confirmButtonText: 'Ok'
+    }); 
+        email.style.border="solid thick red";
+        isValid = false;
+    }//If correo 
+    if (! telefono()){
+        Swal.fire({title:"El campo telefono es requerido",
+    text: 'Máximo 10 cifras',
+    icon: 'error',
+    confirmButtonColor: "#E4C247",
+    confirmButtonText: 'Ok'
+}); 
+    txtNumber.style.border="solid thick red";
+    isValid = false;
+    }//telefono
 
     if (! validarNombre()){
         Swal.fire({title:"El campo nombre, es requerido",
@@ -59,38 +89,10 @@ document.getElementById('form')
         isValid = false;
     }//Nombre
 
-    if (! telefono()){
-        Swal.fire({title:"El campo telefono es requerido",
-    text: 'Máximo 10 cifras',
-    icon: 'error',
-    confirmButtonColor: "#E4C247",
-    confirmButtonText: 'Ok'
-}); 
-    txtNumber.style.border="solid thick red";
-    isValid = false;
-    }//telefono
+   
 
-    if (! validarCorreo()){
-        Swal.fire({title:"El campo e-mail es requerido",
-        text: 'Se requiere el siguiente formato: tu_correo@dominio.com',
-        icon: 'error',
-        confirmButtonColor: "#E4C247",
-        confirmButtonText: 'Ok'
-    }); 
-        email.style.border="solid thick red";
-        isValid = false;
-    }//If correo 
 
-    if (! validarMensaje()){
-        Swal.fire({title:"El campo mensaje, es requerido",
-    text: 'este campo no se puede ir vacío',
-    icon: 'error',
-    confirmButtonColor: "#E4C247",
-    confirmButtonText: 'Ok'
-}); 
-    mensaje.style.border="solid thick red";
-    isValid = false;
-    }//validar mensaje
+    
 
     if ((!validarNombre())&&(!validarCorreo()) && (!telefono())){
         Swal.fire({title:"Completa los campos obligatorios",
