@@ -1,0 +1,40 @@
+
+.animado, .animado1, .animadoSide  {
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.mostrarArriba, .mostrarArriba1{
+    animation: mostrarArriba 1s;
+}
+
+@keyframes mostrarArriba {
+    0%{
+        transform:translateY(100px);
+    }
+    100%{
+        transform: translateY(0);
+
+    }
+}
+@keyframes mostrarArriba1 {
+    0%{
+        transform:translateY(100px);
+    }
+    100%{
+        transform: translateY(0);
+
+    }
+}
+
+.mostrarLateral {
+    animation: mostrarLateral 1s;
+}
+@keyframes mostrarLateral{
+    0% {
+        transform: translateX(-200px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}

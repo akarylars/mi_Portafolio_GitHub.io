@@ -32,7 +32,7 @@ left: 0;
 }
 
 .wrapperCard:hover .infoCard {
-  background: linear-gradient(rgba(224, 181, 8, 0.7),rgba(102, 5, 81, 0.7), rgba(141, 8, 148, 0.7));/* Cambiar el fondo al pasar el cursor */
+  background: linear-gradient(#1e010d,#44021e, #af4b67);/* Cambiar el fondo al pasar el cursor */
   opacity: 1;
 }
 
@@ -49,6 +49,8 @@ p.text-white {
 p.text-white {
     font-size: x-small;
 }
-
+p.card-text.text-white.idiomaC2.animadoSide.mostrarLateral {
+  font-size: medium;
+}
 
 }
